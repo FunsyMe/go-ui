@@ -7,6 +7,18 @@ body {
     color: #ffffff;
 }
 
+button {
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    margin: 0;
+    padding: 0;
+}
+
 .control-bar {
     position: absolute; 
     display: flex; 
