@@ -10,11 +10,9 @@ body {
 button {
     appearance: none;
     -webkit-appearance: none;
-
     border: none;
     outline: none;
     background: none;
-
     margin: 0;
     padding: 0;
 }
