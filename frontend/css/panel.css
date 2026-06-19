@@ -82,16 +82,23 @@ button {
 
 .control-bar button:hover {
     background-color: #222222;
+    color: #dddddd;
+
+    svg {
+        stroke: #dddddd;
+        fill: #dddddd;
+    }
+}
+
+button.active {
+    background-color: #333333;
+
     color: #ffffff;
 
     svg {
         stroke: #ffffff;
         fill: #ffffff;
     }
-}
-
-button.active {
-    background-color: #333333;
 }
 
 .control-bar button:active {
