@@ -68,16 +68,15 @@ button {
 }
 
 .page {
-    position: absolute;
     margin-left: 14%;
-    width: 86%;
-    height: 100%;
 }
 
 .page iframe {
     border: none;
     padding: 0;
     margin: 0;
+    width: 86vw;
+    height: 99.5vh;
 }
 
 .control-bar button:hover {
