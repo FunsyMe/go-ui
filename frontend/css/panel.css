@@ -1,0 +1,56 @@
+body {
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    font-family: Inter; 
+    background-color: #181818; 
+    color: #ffffff;
+}
+
+.control-bar {
+    position: absolute; 
+    display: flex; 
+    flex-direction: 
+    column; height: 
+    100%; width: 14%; 
+    text-align: center; 
+    border-right: 2px solid #282828; 
+    background-color: #181818;
+}
+
+.control-bar .bar-title {
+    font-size: 42px; 
+    font-weight: bold; 
+    margin-top: 10px;
+}
+
+.control-bar .bar-description {
+    margin-bottom: 32px;
+}
+
+.control-bar button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 2px; 
+    margin-left: 8px; 
+    margin-right: 8px; 
+    padding: 14px; 
+    border: none; 
+    border-radius: 6px; 
+    text-align: left; 
+    font-size: 16px; 
+    transition: all 0.4s; 
+    background-color: #181818; 
+    color: #ffffff;
+}
+
+.control-bar svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.control-bar button:hover {
+    background-color: #222222;
+}
