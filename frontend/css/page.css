@@ -49,6 +49,13 @@ body {
         font-size: large;
         color: white;
         font-weight: bold;
+
+        button {
+            font-size: medium;
+            font-weight: bold;
+
+            border-color: #4e4e4e;
+        }
     }
     .box-data {
         font-size: medium;
@@ -77,4 +84,20 @@ body {
     color: rgba(255, 255, 255, 0.67);
 
     transition: all 0.4s;
+}
+
+.box-data-2 button {
+    height: 100%;
+    padding: 3px;
+
+    color: white;
+    text-align: left;
+
+    transition: all 0.4s;
+
+    border: 2px solid #282828; 
+    border-radius: 6px;
+
+    margin: 3px;
+    margin-left: 0;
 }
