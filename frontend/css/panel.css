@@ -10,10 +10,11 @@ body {
 .control-bar {
     position: absolute; 
     display: flex; 
-    flex-direction: 
-    column; height: 
-    100%; width: 14%; 
-    text-align: center; 
+    flex-direction: column; 
+    height: 100%; 
+    width: 14%; 
+    text-align: center;
+    z-index: 1;
     border-right: 2px solid #282828; 
     background-color: #181818;
 }
@@ -56,6 +57,19 @@ body {
     flex-shrink: 0;
 }
 
+.page {
+    position: absolute;
+    margin-left: 14%;
+    width: 86%;
+    height: 100%;
+}
+
+.page iframe {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
 .control-bar button:hover {
     background-color: #222222;
     color: #ffffff;
@@ -66,7 +80,10 @@ body {
     }
 }
 
+button.active {
+    background-color: #333333;
+}
+
 .control-bar button:active {
     background-color: #333333;
-    font-weight: bolder;
 }
