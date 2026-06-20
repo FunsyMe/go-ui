@@ -226,3 +226,11 @@ body {
     justify-content: flex-end;
     text-align: right;
 }
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}

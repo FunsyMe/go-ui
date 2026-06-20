@@ -100,3 +100,7 @@ button.active {
 .control-bar button:active {
     background-color: #333333;
 }
+
+small {
+    color: #ffffffaf;
+}
