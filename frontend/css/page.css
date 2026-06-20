@@ -86,7 +86,7 @@ body {
     transition: all 0.4s;
 }
 
-.box-data-2 button {
+.box-data-2 button, .box-data-2 input {
     height: 100%;
     padding: 3px;
 
@@ -100,4 +100,6 @@ body {
 
     margin: 3px;
     margin-left: 0;
+
+    background-color: transparent;
 }
