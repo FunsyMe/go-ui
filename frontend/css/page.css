@@ -6,100 +6,80 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8.7px;
+    width: 100%;
 }
 
 .box-place .box-line {
     display: flex;
     flex-direction: row;
+    width: 100%;
     gap: 15px;
+    box-sizing: border-box;
 }
 
 .box-line .box {
     display: flex;
+    flex: 1;
     flex-direction: row;
+    align-items: center;
     gap: 12px;
+    height: 86px;
     border: 2px solid #282828; 
     border-radius: 10px;
     padding: 10px;
 }
+
 .box-line .box-huge { padding: 20px; }
 .box-line .box-huge-x { padding: 30px; }
 .box-line .box-huge-xx { padding: 40px; }
 
 .box .card-image {
-    width: 96px;
-    height: auto;
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 12px;
     border-radius: 16px;
 }
 
 .box .box-info {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
-}
-
-.box .box-info:hover {
-    .box-title {
-        font-size: large;
-        color: white;
-        font-weight: bold;
-    }
-    .box-data-2 {
-        font-size: large;
-        color: white;
-        font-weight: bold;
-
-        button {
-            font-size: medium;
-            font-weight: bold;
-
-            border-color: #4e4e4e;
-        }
-    }
-    .box-data {
-        font-size: medium;
-        color: rgba(255, 255, 255, 0.67);
-        font-weight: normal;
-    }
 }
 
 .box-info .box-title {
     font-size: medium;
+    margin-left: 12px;
+    margin-bottom: 6px;
     color: rgba(255, 255, 255, 0.67);
-
     transition: all 0.4s;
 }
 
 .box-info .box-data {
     font-size: xx-large;
+    margin-left: 12px;
+    margin-bottom: 6px;
     color: white;
-    font-weight: bold;
-
     transition: all 0.4s;
 }
 
 .box-info .box-data-2 {
-    font-size: medium;
+    font-size: 14px;
+    margin-left: 12px;
+    margin-bottom: 6px;
     color: rgba(255, 255, 255, 0.67);
-
     transition: all 0.4s;
 }
 
 .box-data-2 button, .box-data-2 input {
     height: 100%;
     padding: 3px;
-
     color: white;
     text-align: left;
-
     transition: all 0.4s;
-
     border: 2px solid #282828; 
     border-radius: 6px;
-
     margin: 3px;
     margin-left: 0;
-
     background-color: transparent;
 }

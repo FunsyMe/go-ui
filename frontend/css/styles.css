@@ -82,7 +82,7 @@ button {
 .control-bar button:hover {
     background-color: #222222;
     color: #dddddd;
-
+    cursor: pointer;
     svg {
         stroke: #dddddd;
         fill: #dddddd;
@@ -91,9 +91,7 @@ button {
 
 button.active {
     background-color: #333333;
-
     color: #ffffff;
-
     svg {
         stroke: #ffffff;
         fill: #ffffff;
