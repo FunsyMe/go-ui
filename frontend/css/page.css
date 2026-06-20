@@ -83,3 +83,93 @@ body {
     margin-left: 0;
     background-color: transparent;
 }
+
+.box .tablebox {
+    width: 100%;
+}
+
+.tablebox table {
+    width: 100%;
+
+    border: 2px solid #3c3c3c;
+    border-radius: 20px 0px 20px 0px;
+    padding: 10px;
+
+    border-spacing: 0; 
+}
+
+.tablebox .col-element {
+    padding: 5px 0 5px 0;
+
+    text-align: center;
+}
+
+.btn-group {
+    display: flex;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    justify-content: center;
+}
+
+.btn-group button {
+    width: 20px;
+    height: 20px;
+    color: white;
+
+    border: 2px solid #3c3c3c;
+    border-radius: 4px;
+
+    background-color: #3c3c3c;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.053);
+}
+
+thead {
+    background: #181818;
+}
+
+thead th {
+    color: #9ca3af;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+td:not(:first-child),
+th:not(:first-child) {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+} 
+
+.btn-group .btn-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-group .btn-icon-trash {
+    outline: rgb(255, 82, 82);
+    fill: rgb(255, 82, 82);
+}
+
+.btn-group button:disabled .btn-icon-analytics {
+    outline: rgba(255, 255, 255, 0.5);
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.great-ping, .online {
+    color: rgb(160, 255, 134);
+}
+
+.norm-ping {
+    color: rgb(255, 233, 134);
+}
+
+.bad-ping, .offline {
+    color: rgb(255, 82, 82);
+}
