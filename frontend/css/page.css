@@ -88,7 +88,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px 0px 20px;
+    padding: 20px;
 }
 
 .box-table input {
@@ -101,7 +101,7 @@ body {
     transition: all 0.4s;
     color: #aaaaaa;
     border: 2px solid #282828;
-    background-color: #181818;
+    background-color: #19191919;
 }
 
 .box-table input::placeholder {
