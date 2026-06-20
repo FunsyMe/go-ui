@@ -104,3 +104,13 @@ button.active {
 small {
     color: #ffffffaf;
 }
+
+pre {
+    border-radius: 10px;
+    border: 2px solid #282828;
+    background-color: #202020;
+
+    width: 85%;
+
+    padding: 10px;
+}
