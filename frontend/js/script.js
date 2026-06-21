@@ -12,7 +12,7 @@ buttons.forEach(button => {
 
         switch (page) {
             case "panel":
-                page_iframe.src = "panel.html";
+                page_iframe.src = "dashboard.html";
                 break;
 
             case "proxy-settings":

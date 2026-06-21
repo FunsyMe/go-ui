@@ -291,12 +291,12 @@ body {
 }
 
 /* Special (pomogite mne ya zaebalsya refactorit kod 😭) */
-.icon-blue { background-color: #1364c7; outline: 4px solid #1364c752; }
-.icon-green { background-color: #169a53; outline: 4px solid #169a5352; }
+.icon-blue { background-color: #0088ff; outline: 4px solid #0088ff52; }
+.icon-green { background-color: #00c55c; outline: 4px solid #00c55c52; }
 .icon-purple { background-color: #6a36bb; outline: 4px solid #6a36bb52; }
-.icon-orange { background-color: #c08114; outline: 4px solid #c0811452; }
+.icon-orange { background-color: #ffbb00; outline: 4px solid #ffbb0052; }
 
-.text-blue { color: #5297ec; }
+.text-blue { color: #0088ff; }
 .text-purple { color: #9666e4; }
 .text-green { color: #a0ff86; }
 .text-yellow { color: #ffe986; }
