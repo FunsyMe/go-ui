@@ -8,197 +8,239 @@
     <link href="https://googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/page.css">
-    <title>panel</title>
+    <title>Panel</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="box-place">
-        <div class="box-line">
-            <div class="box box-huge-x">
-                <img src="images/drive.svg" class="card-image" style="background-color: #1364c7; outline: 4px solid #1364c752;">
-                <div class="box-info">
-                    <div class="box-title">Всего прокси</div>
-                    <div class="box-data">10</div>
-                    <div class="box-data-2">Онлайн: 1</div>
+    <div class="dashboard">
+        <div class="dashboard-row">
+            <div class="card card-xl">
+                <img src="images/drive.svg" class="card-image icon-blue" alt="Drive">
+                <div class="card-body">
+                    <div class="card-title">Всего прокси</div>
+                    <div class="card-value">10</div>
+                    <div class="card-subtitle">Онлайн: 1</div>
                 </div>
             </div>
-            <div class="box box-huge-x">
-                <img src="images/connections.svg" class="card-image" style="background-color: #169a53; outline: 4px solid #169a5352;">
-                <div class="box-info">
-                    <div class="box-title">Текущие соединения</div>
-                    <div class="box-data">20</div>
-                    <div class="box-data-2">Максимум: 100</div>
+            
+            <div class="card card-xl">
+                <img src="images/connections.svg" class="card-image icon-green" alt="Connections">
+                <div class="card-body">
+                    <div class="card-title">Текущие соединения</div>
+                    <div class="card-value">20</div>
+                    <div class="card-subtitle">Максимум: 100</div>
                 </div>
             </div>
-            <div class="box box-huge-x">
-                <img src="images/traffic.svg" class="card-image" style="background-color: #6a36bb; outline: 4px solid #6a36bb52;">
-                <div class="box-info">
-                    <div class="box-title">Трафик</div>
-                    <div class="box-data">10.0 GB</div>
-                    <div class="box-data-2">Входящий: <span class="incoming-traffic" style="color: #5297ec;">2.1 GB</span></div>
-                    <div class="box-data-2">Исходящиий: <span class="outgoing-traffic" style="color: #9666e4;">7.9 GB</span></div>
+            
+            <div class="card card-xl">
+                <img src="images/traffic.svg" class="card-image icon-purple" alt="Traffic">
+                <div class="card-body">
+                    <div class="card-title">Трафик</div>
+                    <div class="card-value">10.0 GB</div>
+                    <div class="card-subtitle">Входящий: <span class="text-blue">2.1 GB</span></div>
+                    <div class="card-subtitle">Исходящий: <span class="text-purple">7.9 GB</span></div>
                 </div>
             </div>
-            <div class="box box-huge-x">
-                <img src="images/ping.svg" class="card-image" style="background-color: #c08114; outline: 4px solid #c0811452;">
-                <div class="box-info">
-                    <div class="box-title">Пинг</div>
-                    <div class="box-data">42 ms</div>
-                    <div class="box-data-2">Минимум: <span class="min-ping" style="color: #a0ff86;">30 ms</span></div>
-                    <div class="box-data-2">Максимум: <span class="max-ping" style="color: #ffe986;">72 ms</span></div>
+            
+            <div class="card card-xl">
+                <img src="images/ping.svg" class="card-image icon-orange" alt="Ping">
+                <div class="card-body">
+                    <div class="card-title">Пинг</div>
+                    <div class="card-value">42 ms</div>
+                    <div class="card-subtitle">Минимум: <span class="text-green">30 ms</span></div>
+                    <div class="card-subtitle">Максимум: <span class="text-yellow">72 ms</span></div>
                 </div>
             </div>
         </div>
 
-        <div class="box-line">
-            <div class="box box-huge-x">
-                <img src="images/logo.svg" class="card-image">
-                <div class="box-info">
-                    <div class="box-title">placeholder</div>
-                    <div class="box-data">placeholder</div>
-                    <div class="box-data-2">placeholder</div>
+        <div class="dashboard-row row-expanded">
+            <div class="card card-lg card-chart">
+                <div class="chart-container">
+                    <canvas id="trafficChart"></canvas>
                 </div>
             </div>
-            <div class="box box-huge-x">
-                <img src="images/logo.svg" class="card-image">
-                <div class="box-info">
-                    <div class="box-title">placeholder</div>
-                    <div class="box-data">placeholder</div>
-                    <div class="box-data-2">placeholder</div>
+            
+            <div class="card card-xl">
+                <img src="images/logo.svg" class="card-image" alt="Logo">
+                <div class="card-body">
+                    <div class="card-title">placeholder</div>
+                    <div class="card-value">placeholder</div>
+                    <div class="card-subtitle">placeholder</div>
                 </div>
             </div>
-            <div class="box box-huge-x">
-                <img src="images/logo.svg" class="card-image">
-                <div class="box-info">
-                    <div class="box-title">placeholder</div>
-                    <div class="box-data">placeholder</div>
-                    <div class="box-data-2">placeholder</div>
+            
+            <div class="card card-xl">
+                <img src="images/logo.svg" class="card-image" alt="Logo">
+                <div class="card-body">
+                    <div class="card-title">placeholder</div>
+                    <div class="card-value">placeholder</div>
+                    <div class="card-subtitle">placeholder</div>
                 </div>
             </div>
         </div>
-        <div class="box-line">
-            <div class="box box-small" style="flex-direction: column; gap: 0;">
-                <div class="box-info" style="width: 100%; background-color: #202020; border-bottom: 2px solid #282828; border-radius: 8px 8px 0 0;">
-                    <div class="box-table">
-                        <div class="box-title">Прокси</div>
+
+        <div class="dashboard-row row-expanded">
+            <div class="card card-sm card-vertical">
+                <div class="table-header">
+                    <div class="table-toolbar">
+                        <div class="card-title title-offset">Прокси</div>
                         <input type="text" id="proxy_search" name="proxy_search" placeholder="Поиск...">
                     </div>
                 </div>
 
-                <div class="tablebox">
+                <div class="table-wrapper proxy-offset">
                     <table>
-                        <tr class="col-hdr">
-                            <th class="col">ID</th>
-                            <th class="col">Имя</th>
-                            <th class="col">Адрес</th>
-                            <th class="col">Порт</th>
-                            <th class="col">Секрет</th>
-                            <th class="col">Статус</th>
-                            <th class="col">Пинг</th>
-                            <th class="col">Соединения</th>
-                            <th class="col">Трафик</th>
-                            <th class="col">Действия</th>
-                        </tr>
-                        <tr class="col-element">
-                            <td class="col">1</td>
-                            <td class="col">proxy-1</td>
-                            <td class="col">89.35.99.12</td>
-                            <td class="col">8443</td>
-                            <td class="col">••••••</td>
-                            <td class="col online">Онлайн</td>
-                            <td class="col great-ping">24ms</td>
-                            <td class="col">31</td>
-                            <td class="col">5.6 GB</td>
-                            <td class="col">
-                                <div class="btn-group">
-                                    <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
-                                    <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
-                                    <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="col-element">
-                            <td class="col">2</td>
-                            <td class="col">proxy-2</td>
-                            <td class="col">88.34.98.11</td>
-                            <td class="col">443</td>
-                            <td class="col">••••••</td>
-                            <td class="col online">Онлайн</td>
-                            <td class="col normal-ping">89ms</td>
-                            <td class="col">78</td>
-                            <td class="col">56.1 GB</td>
-                            <td class="col">
-                                <div class="btn-group">
-                                    <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
-                                    <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
-                                    <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="col-element">
-                            <td class="col">3</td>
-                            <td class="col">proxy-3</td>
-                            <td class="col">148.47.36.75</td>
-                            <td class="col">2096</td>
-                            <td class="col">••••••</td>
-                            <td class="col offline">Офлайн</td>
-                            <td class="col bad-ping">n/a</td>
-                            <td class="col"></td>
-                            <td class="col"></td>
-                            <td class="col">
-                                <div class="btn-group">
-                                    <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
-                                    <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
-                                    <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="col-element">
-                            <td class="col">4</td>
-                            <td class="col">proxy-4</td>
-                            <td class="col">148.47.32.10</td>
-                            <td class="col">1024</td>
-                            <td class="col">••••••</td>
-                            <td class="col online">Онлайн</td>
-                            <td class="col great-ping">52</td>
-                            <td class="col">40</td>
-                            <td class="col">98.2 GB</td>
-                            <td class="col">
-                                <div class="btn-group">
-                                    <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
-                                    <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
-                                    <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
-                                </div>
-                            </td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Имя</th>
+                                <th>Адрес</th>
+                                <th>Порт</th>
+                                <th>Секрет</th>
+                                <th>Статус</th>
+                                <th>Пинг</th>
+                                <th>Соединения</th>
+                                <th>Трафик</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>proxy-1</td>
+                                <td>89.35.99.12</td>
+                                <td>8443</td>
+                                <td>••••••</td>
+                                <td class="status-online">Онлайн</td>
+                                <td class="ping-great">24ms</td>
+                                <td>31</td>
+                                <td>5.6 GB</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>proxy-2</td>
+                                <td>88.34.98.11</td>
+                                <td>443</td>
+                                <td>••••••</td>
+                                <td class="status-online">Онлайн</td>
+                                <td class="ping-normal">89ms</td>
+                                <td>78</td>
+                                <td>56.1 GB</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>proxy-3</td>
+                                <td>148.47.36.75</td>
+                                <td>2096</td>
+                                <td>••••••</td>
+                                <td class="status-offline">Офлайн</td>
+                                <td class="ping-bad">n/a</td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>proxy-4</td>
+                                <td>148.47.32.10</td>
+                                <td>1024</td>
+                                <td>••••••</td>
+                                <td class="status-online">Онлайн</td>
+                                <td class="ping-great">52</td>
+                                <td>40</td>
+                                <td>98.2 GB</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>proxy-5</td>
+                                <td>24.41.102.2</td>
+                                <td>1024</td>
+                                <td>••••••</td>
+                                <td class="status-online">Онлайн</td>
+                                <td class="ping-great">68</td>
+                                <td>2</td>
+                                <td>5.2 GB</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button><svg class="btn-icon btn-icon-analytics" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-edit" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg></button>
+                                        <button><svg class="btn-icon btn-icon-trash" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
-            <div class="box box-small" style="flex-direction: column; gap: 0;">
-                <div class="box-info" style="width: 100%; background-color: #202020; border-bottom: 2px solid #282828; border-radius: 8px 8px 0 0;">
-                    <div class="box-table">
-                        <div class="box-title" style="padding: 8px;">Системная информация</div>
+
+            <div class="card card-sm card-vertical">
+                <div class="table-header">
+                    <div class="table-toolbar">
+                        <div class="card-title title-padded">Системная информация</div>
                     </div>
                 </div>
-                <div class="tablebox">
+                
+                <div class="table-wrapper">
                     <table>
-                        <tr class="col-element"><td class="col" style="text-align: left;">ОС</td>
-                        <td class="col" style="text-align: right;">Ubuntu 22.04 LTS <small>5.15.0-94-generic</small></td></tr>
-
-                        <tr class="col-element"><td class="col" style="text-align: left;">Память</td>
-                        <td class="col" style="text-align: right;">2.4 GB<small> / 7.8 GB</small></td></tr>
-
-                        <tr class="col-element"><td class="col" style="text-align: left;">Диск</td>
-                        <td class="col" style="text-align: right;">21.4 GB <small> / 79.8 GB</small></td></tr>
-
-                        <tr class="col-element"><td class="col" style="text-align: left;">Время</td>
-                            <td class="col" style="text-align: right;">2026-06-20 8:26:57</td></tr>
-
-                        <tr class="col-element"><td class="col" style="text-align: left;">Часовой пояс</td>
-                        <td class="col" style="text-align: right;">UTC +3</td></tr>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">ОС</td>
+                                <td class="text-right">Ubuntu 22.04 LTS <small>5.15.0-94-generic</small></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Процессор</td>
+                                <td class="text-right">14%<small> / 102%</small></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Память</td>
+                                <td class="text-right">2.4 GB<small> / 7.8 GB</small></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Диск</td>
+                                <td class="text-right">21.4 GB <small> / 79.8 GB</small></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Время</td>
+                                <td class="text-right">2026-06-20 8:26:57</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Часовой пояс</td>
+                                <td class="text-right">UTC +3</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="js/panel.js"></script>
 </body>
 </html>
