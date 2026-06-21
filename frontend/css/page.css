@@ -70,7 +70,7 @@ body {
 }
 
 .card-chart {
-    flex: 2;
+    flex: 2.5;
 }
 
 .card-image {
@@ -188,23 +188,30 @@ body {
     border-bottom: 1px solid #ffffff0e;
 }
 
-.table-wrapper td {
-    font-size: small;
-}
-
-.table-wrapper tr {
-    transition: all 0.4s;
-}
-
-.table-wrapper tr:hover {
-    background-color: #333333;
-}
-
 .table-wrapper th {
     font-size: 14px;
     font-weight: normal;
     color: #cccccc;
-    background: #252525;
+    background-color: #252525;
+}
+
+
+.table-wrapper td {
+    font-size: small;
+}
+
+.table-wrapper thead tr th,
+.table-wrapper tr {
+    transition: all 0.4s;
+}
+
+.table-wrapper thead tr:hover th,
+.table-wrapper tr:hover {
+    background-color: #333333;
+}
+
+.table-wrapper .penis {
+    background-color: #252525;
 }
 
 .table-wrapper tr:last-child th,
@@ -230,6 +237,13 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+.chart-container canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 /* Buttons */
@@ -299,6 +313,25 @@ body {
 .ping-bad,
 .status-offline {
     color: #ff5252;
+}
+
+.country-code {
+    padding: 0px 4px;
+    border-radius: 4px;
+    color: #0088ff;
+    background-color: #0088ff22;
+}
+
+.status-online {
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #a0ff8622;
+}
+
+.status-offline {
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #ff525222;
 }
 
 .text-right {

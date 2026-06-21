@@ -1,21 +1,22 @@
-const ctx = document.getElementById('trafficChart').getContext('2d');
+const trafficChart = document.getElementById('trafficChart').getContext('2d');
+const proxyDoughnutChart = document.getElementById('proxyDoughnutChart').getContext('2d');
 
-const labels = [
+const trafficLabels = [
     '00:00', '', '', '', '04:00', '', '', '', '08:00', '', '', '', 
     '12:00', '', '', '', '16:00', '', '', '', '20:00', '', '', '', ''
 ];
 
-const dataBlue = [2.8, 3.1, 3.5, 3.3, 4.0, 3.4, 3.7, 4.1, 4.9, 4.7, 4.8, 6.1, 6.1, 7.2, 7.2, 6.1, 6.1, 5.0, 6.1, 7.3, 6.9, 6.1, 6.3, 6.6, 4.8, 4.1, 3.5];
-const dataPurple = [1.2, 1.4, 1.7, 1.5, 2.1, 2.0, 2.0, 2.2, 2.1, 2.7, 2.4, 2.4, 3.2, 3.1, 3.8, 3.5, 2.8, 3.0, 2.5, 3.3, 4.1, 3.7, 3.5, 3.2, 3.3, 3.5, 2.3, 2.0, 1.8];
+const incomingTraffic = [2.8, 3.1, 3.5, 3.3, 4.0, 3.4, 3.7, 4.1, 4.9, 4.7, 4.8, 6.1, 6.1, 7.2, 7.2, 6.1, 6.1, 5.0, 6.1, 7.3, 6.9, 6.1, 6.3, 6.6, 4.8, 4.1, 3.5];
+const outgoingTraffic = [1.2, 1.4, 1.7, 1.5, 2.1, 2.0, 2.0, 2.2, 2.1, 2.7, 2.4, 2.4, 3.2, 3.1, 3.8, 3.5, 2.8, 3.0, 2.5, 3.3, 4.1, 3.7, 3.5, 3.2, 3.3, 3.5, 2.3, 2.0, 1.8];
 
-new Chart(ctx, {
+new Chart(trafficChart, {
     type: 'line',
     data: {
-        labels: labels,
+        labels: trafficLabels,
         datasets: [
             {
                 label: 'Входящий',
-                data: dataBlue,
+                data: incomingTraffic,
                 borderColor: '#0088ff',
                 borderWidth: 2,
                 pointBackgroundColor: '#0088ff',
@@ -35,7 +36,7 @@ new Chart(ctx, {
             },
             {
                 label: 'Исходящий',
-                data: dataPurple,
+                data: outgoingTraffic,
                 borderColor: '#a133ff',
                 borderWidth: 2,
                 pointBackgroundColor: '#a133ff',

@@ -60,21 +60,9 @@
                 </div>
             </div>
             
-            <div class="card card-xl">
-                <img src="images/logo.svg" class="card-image" alt="Logo">
-                <div class="card-body">
-                    <div class="card-title">placeholder</div>
-                    <div class="card-value">placeholder</div>
-                    <div class="card-subtitle">placeholder</div>
-                </div>
-            </div>
-            
-            <div class="card card-xl">
-                <img src="images/logo.svg" class="card-image" alt="Logo">
-                <div class="card-body">
-                    <div class="card-title">placeholder</div>
-                    <div class="card-value">placeholder</div>
-                    <div class="card-subtitle">placeholder</div>
+            <div class="card card-lg">
+                <div class="chart-container">
+                    <canvas id="proxyDoughnutChart"></canvas>
                 </div>
             </div>
         </div>
@@ -107,11 +95,11 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>proxy-1</td>
+                                <td>proxy-1 <span class="country-code">ru</span></td>
                                 <td>89.35.99.12</td>
                                 <td>8443</td>
                                 <td>••••••</td>
-                                <td class="status-online">Онлайн</td>
+                                <td><span class="status-online">Онлайн</span></td>
                                 <td class="ping-great">24ms</td>
                                 <td>31</td>
                                 <td>5.6 GB</td>
@@ -125,11 +113,11 @@
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>proxy-2</td>
-                                <td>88.34.98.11</td>
+                                <td>proxy-2 <span class="country-code">ru</span></td>
+                                <td>89.35.99.12</td>
                                 <td>443</td>
                                 <td>••••••</td>
-                                <td class="status-online">Онлайн</td>
+                                <td><span class="status-online">Онлайн</span></td>
                                 <td class="ping-normal">89ms</td>
                                 <td>78</td>
                                 <td>56.1 GB</td>
@@ -143,11 +131,11 @@
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>proxy-3</td>
-                                <td>148.47.36.75</td>
+                                <td>proxy-3 <span class="country-code">ru</span></td>
+                                <td>89.35.99.12</td>
                                 <td>2096</td>
                                 <td>••••••</td>
-                                <td class="status-offline">Офлайн</td>
+                                <td><span class="status-offline">Офлайн</span></td>
                                 <td class="ping-bad">n/a</td>
                                 <td></td>
                                 <td></td>
@@ -161,11 +149,11 @@
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>proxy-4</td>
-                                <td>148.47.32.10</td>
+                                <td>proxy-4 <span class="country-code">ru</span></td>
+                                <td>89.35.99.12</td>
                                 <td>1024</td>
                                 <td>••••••</td>
-                                <td class="status-online">Онлайн</td>
+                                <td><span class="status-online">Онлайн</span></td>
                                 <td class="ping-great">52</td>
                                 <td>40</td>
                                 <td>98.2 GB</td>
@@ -179,11 +167,11 @@
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>proxy-5</td>
-                                <td>24.41.102.2</td>
+                                <td>proxy-5 <span class="country-code">ru</span></td>
+                                <td>89.35.99.12</td>
                                 <td>1024</td>
                                 <td>••••••</td>
-                                <td class="status-online">Онлайн</td>
+                                <td><span class="status-online">Онлайн</span></td>
                                 <td class="ping-great">68</td>
                                 <td>2</td>
                                 <td>5.2 GB</td>
@@ -210,7 +198,7 @@
                 <div class="table-wrapper">
                     <table>
                         <tbody>
-                            <tr>
+                            <tr class="penis">
                                 <td class="text-left">ОС</td>
                                 <td class="text-right">Ubuntu 22.04 LTS <small>5.15.0-94-generic</small></td>
                             </tr>
