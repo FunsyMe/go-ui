@@ -27,8 +27,8 @@ new Chart(ctx, {
                     const {ctx, chartArea} = chart;
                     if (!chartArea) return null;
                     const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
-                    gradient.addColorStop(0, 'rgba(0, 136, 255, 0.4)');
-                    gradient.addColorStop(1, 'rgba(0, 136, 255, 0.0)');
+                    gradient.addColorStop(0, '#0088ff66');
+                    gradient.addColorStop(1, '#0088ff00');
                     return gradient;
                 },
                 tension: 0
@@ -47,8 +47,8 @@ new Chart(ctx, {
                     const {ctx, chartArea} = chart;
                     if (!chartArea) return null;
                     const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
-                    gradient.addColorStop(0, 'rgba(161, 51, 255, 0.4)');
-                    gradient.addColorStop(1, 'rgba(161, 51, 255, 0.0)'); 
+                    gradient.addColorStop(0, '#a133ff66');
+                    gradient.addColorStop(1, '#a133ff00'); 
                     return gradient;
                 },
                 tension: 0
@@ -87,7 +87,7 @@ new Chart(ctx, {
                 }
             },
             tooltip: {
-                backgroundColor: 'rgba(24, 24, 24, 0.6)',
+                backgroundColor: '#18181899',
                 titleColor: '#ffffff',
                 bodyColor: '#ffffff',
                 borderColor: '#181818',
@@ -97,7 +97,7 @@ new Chart(ctx, {
         scales: {
             x: {
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.04)',
+                    color: '#FFFFFF0A',
                     drawBorder: false,
                     tickLength: 0
                 },
@@ -112,7 +112,7 @@ new Chart(ctx, {
                 min: 0,
                 max: 8,
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.04)',
+                    color: '#ffffff0a',
                     drawBorder: false,
                     tickLength: 0
                 },
