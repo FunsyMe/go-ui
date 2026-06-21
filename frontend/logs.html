@@ -8,18 +8,17 @@
     <title>logs</title>
 </head>
 <body>
-    <div class="box-place">
-        <div class="box-line">
-            <div class="box box-huge-x" style="flex-direction: column; align-items: flex-start;">
-                <div class="box-info">
-                    <div class="box-title">Логи</div>
-                </div>
-                <div style="width: 100%;">
-                    <pre id="logs">
+    <div class="dashboard">
+        <div class="dashboard-row">
+            <fieldset class="card card-xl" style="flex-direction: column; align-items: start;">
+                <legend>Логи<button>Обновить</button></legend>
+                <fieldset class="code-container">
+                    <legend><button>Копировать</button></legend>
+                    <pre id="logs" class="code">
 2026-06-20 6:29:30 UTC [DEBUG] Connection from 85.32.87.29 | tag proxy-2
 2026-06-19 3:45:15 UTC [DEBUG] Log in from 85.32.87.29</pre>
-                </div>
-            </div>
+                </fieldset>
+            </fieldset>
         </div>
     </div>
 </body>
