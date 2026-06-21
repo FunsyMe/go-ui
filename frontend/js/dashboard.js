@@ -162,11 +162,11 @@ const centerText = {
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
 
-        ctx.font = 'xx-large Inter';
+        ctx.font = 'xx-large Inter, system-ui, sans-serif';
         ctx.fillStyle = '#ffffff';
         ctx.fillText('5', x, y - 12);
 
-        ctx.font = '14px Inter';
+        ctx.font = '14px Inter, system-ui, sans-serif';
         ctx.fillStyle = '#ffffffab';
         ctx.fillText('Всего', x, y + 12)
     }
