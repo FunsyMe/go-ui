@@ -76,6 +76,11 @@ body {
     gap: 0;
 }
 
+.card-code {
+    flex-direction: column;
+    align-items: start;
+}
+
 .card-expanded {
     flex: 2.5;
 }
@@ -116,6 +121,34 @@ body {
 .card-subtitle {
     font-size: 14px;
     color: #ffffffab;
+}
+
+.code-container {
+    border-radius: 10px;
+    width: max-content;
+    padding: 10px;
+    background-color: #202020;
+    border: 2px solid #282828;
+}
+
+.code-container .code{
+    width: 100%;
+}
+
+.code-container legend button {
+    border-radius: 4px;
+    color: #ffffff;
+    transition: all 0.4s;
+    margin: 0px 5px;
+    padding: 0px 5px;
+    background: #3d3d3d;
+    border: 2px solid #3d3d3d;
+}
+
+.code-container legend button:hover {
+    cursor: pointer;
+    background-color: #262626;
+    border: 2px solid #262626;
 }
 
 .card-subtitle button,

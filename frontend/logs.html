@@ -10,10 +10,13 @@
 <body>
     <div class="dashboard">
         <div class="dashboard-row">
-            <fieldset class="card card-xl" style="flex-direction: column; align-items: start;">
-                <legend>Логи<button>Обновить</button></legend>
+            <fieldset class="card card-xl card-code">
+                <div class="card-body">
+                    <div class="card-title">Логи</div>
+                </div>
+
                 <fieldset class="code-container">
-                    <legend><button>Копировать</button></legend>
+                    <legend><button class="refresh-button">Обновить</button><button class="clear-button">Очистить</button><button class="copy-button">Копировать</button><button class="download-button">Скачать</button></legend>
                     <pre id="logs" class="code">
 2026-06-20 6:29:30 UTC [DEBUG] Connection from 85.32.87.29 | tag proxy-2
 2026-06-19 3:45:15 UTC [DEBUG] Log in from 85.32.87.29</pre>
@@ -21,5 +24,7 @@
             </fieldset>
         </div>
     </div>
+
+    <script src="js/logs.js"></script>
 </body>
 </html>

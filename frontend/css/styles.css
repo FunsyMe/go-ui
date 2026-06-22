@@ -106,28 +106,3 @@ button.active {
 small {
     color: #ffffffaf;
 }
-
-.card .code-container {
-    border-radius: 10px;
-    border: 2px solid #282828;
-    background-color: #202020;
-
-    width: max-content;
-
-    padding: 10px;
-}
-
-.card .code-container .code{
-    width: 100%;
-}
-
-legend button {
-    border-radius: 4px;
-    color: #ffffff;
-    background: #3c3c3c;
-    border: 2px solid #3c3c3c;
-    transition: all 0.4s;
-
-    margin-left: 10px;
-    margin-right: 10px;
-}
