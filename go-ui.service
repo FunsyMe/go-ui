@@ -1,0 +1,14 @@
+[Unit]
+Description=go-ui service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/go-ui/
+ExecStart=/usr/local/go-ui/go-ui
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
