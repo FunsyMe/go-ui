@@ -1,1 +1,8 @@
 .gigacode
+
+.vscode
+.idea
+
+.DS_Store
+
+*.db
