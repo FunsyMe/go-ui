@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>GO-UI - Вход</title>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-title">Добро пожаловать</div>
+        <input type="text" id="username" name="username" placeholder="Имя пользователя">
+        <input type="password" id="password" name="password" placeholder="Пароль">
+        <button id="login-button">Войти</button>
+    </div>
+
+    <script type="module">
+    import * as THREE from "https://unpkg.com/three@0.166.1/build/three.module.js";
+
+    const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        powerPreference: "high-performance"
+    });
+
+    renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+    renderer.setSize(innerWidth,innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(
+        -1, 1, 1, -1, 0, 1
+    );
+
+    const vertexShader = `
+    varying vec2 vUv;
+
+    void main(){
+        vUv = uv;
+        gl_Position = vec4(position,1.0);
+    }
+    `;
+
+    const fragmentShader = `
+    precision highp float;
+
+    uniform float uTime;
+    uniform vec2 uResolution;
+
+    varying vec2 vUv;
+
+    float hash(vec2 p){
+        p = fract(p * vec2(234.34,435.345));
+        p += dot(p,p+34.23);
+        return fract(p.x*p.y);
+    }
+
+    float noise(vec2 p){
+        vec2 i = floor(p);
+        vec2 f = fract(p);
+
+        float a = hash(i);
+        float b = hash(i + vec2(1.0,0.0));
+        float c = hash(i + vec2(0.0,1.0));
+        float d = hash(i + vec2(1.0,1.0));
+
+        vec2 u = f*f*(3.0-2.0*f);
+
+        return mix(a,b,u.x)
+            + (c-a)*u.y*(1.0-u.x)
+            + (d-b)*u.x*u.y;
+    }
+
+    float fbm(vec2 p){
+
+        float value = 0.0;
+        float amp = 0.5;
+
+        for(int i=0;i<7;i++){
+            value += noise(p) * amp;
+            p *= 2.0;
+            amp *= 0.5;
+        }
+
+        return value;
+    }
+
+    void main(){
+
+        vec2 uv = vUv;
+
+        vec2 p = uv - 0.5;
+        p.x *= uResolution.x / uResolution.y;
+
+        p += vec2(
+            sin(uTime * 0.03),
+            cos(uTime * 0.02)
+        ) * 0.12;
+
+        float t1 = uTime * 0.08;
+        float t2 = uTime * 0.05;
+
+        vec2 flow = p;
+
+        flow += vec2(
+            fbm(flow * 2.0 + t1),
+            fbm(flow * 2.0 - t1)
+        ) * 0.6;
+
+        flow += vec2(
+            fbm(flow * 5.0 - t2),
+            fbm(flow * 5.0 + t2)
+        ) * 0.15;
+
+        float n1 = fbm(flow * 1.2);
+        float n2 = fbm(flow * 2.5);
+        float n3 = fbm(flow * 5.0);
+
+        float pattern =
+            n1 * 0.55 +
+            n2 * 0.30 +
+            n3 * 0.15;
+
+        pattern = smoothstep(
+            0.05, 
+            0.65,
+            pattern
+        );
+
+        float highlights =
+            pow(pattern, 3.0) * 0.45;
+
+        float gray =
+            pattern * 0.65 +
+            highlights * 0.5;
+
+        gray *= 0.85;
+
+        vec3 color = mix(
+            vec3(0.01),
+            vec3(0.25), 
+            gray
+        );
+
+        gl_FragColor = vec4(color,1.0);
+    }
+    `;
+
+    const material = new THREE.ShaderMaterial({
+        uniforms:{
+            uTime:{value:0},
+            uResolution:{
+                value:new THREE.Vector2(innerWidth, innerHeight)
+            }
+        },
+        vertexShader,
+        fragmentShader
+    });
+
+    const mesh = new THREE.Mesh(
+        new THREE.PlaneGeometry(2,2),
+        material
+    );
+
+    scene.add(mesh);
+
+    function resize(){
+        renderer.setSize(innerWidth, innerHeight);
+        material.uniforms.uResolution.value.set(innerWidth, innerHeight);
+    }
+
+    window.addEventListener("resize", resize);
+
+    const resizeObserver = new ResizeObserver(() => resize());
+    resizeObserver.observe(document.body);
+
+    function animate(time){
+        material.uniforms.uTime.value = time * 0.001;
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
