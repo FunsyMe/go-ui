@@ -125,9 +125,8 @@ body {
 
 .code-container {
     border-radius: 10px;
-    width: max-content;
     padding: 10px;
-    background-color: #202020;
+    background-color: #1f1f1f;
     border: 2px solid #282828;
 }
 
@@ -250,7 +249,7 @@ body {
     background-color: #333333;
 }
 
-.table-wrapper .penis {
+.table-wrapper .first-raw {
     background-color: #252525;
 }
 
