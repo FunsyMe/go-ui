@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/panel.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="static/css/panel.css">
+    <link rel="stylesheet" href="static/css/login.css">
     <title>GO-UI - Вход</title>
 </head>
 <body>
     <div class="login-card">
         <div class="login-title">Добро пожаловать</div>
-        <input type="text" id="username" name="username" placeholder="Имя пользователя">
-        <input type="password" id="password" name="password" placeholder="Пароль">
+        <input type="text" id="username-input" name="username" placeholder="Имя пользователя">
+        <input type="password" id="password-input" name="password" placeholder="Пароль">
         <button id="login-button">Войти</button>
     </div>
 
+    <script src="static/js/login.js"></script>
     <script type="module">
     import * as THREE from "https://unpkg.com/three@0.166.1/build/three.module.js";
 
