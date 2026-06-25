@@ -47,6 +47,8 @@ func AddUser(username string, password string) {
 		fmt.Printf("Failed to connect to database: %v", err)
 	}
 
+	defer db.Close()
+
 	_, err = db.Exec(`INSERT INTO users (username, password) VALUES (?, ?);`, username, password)
 	if err != nil {
 		fmt.Printf("Failed to add user: %v", err)
@@ -59,8 +61,36 @@ func UpdateUser(id int, username string, password string) {
 		fmt.Printf("Failed to connect to database: %v", err)
 	}
 
+	defer db.Close()
+
 	_, err = db.Exec(`UPDATE users SET username = ?, password = ? WHERE id = ?`, username, password, id)
 	if err != nil {
 		fmt.Printf("Failed to update user: %v", err)
 	}
+}
+
+func GetUser(username string) User {
+	db, err := sql.Open("sqlite", "users.db")
+	if err != nil {
+		fmt.Printf("Failed to connect to database: %v", err)
+	}
+
+	defer db.Close()
+
+	rows, err := db.Query("SELECT username, password FROM users WHERE username = ?", username)
+	if err != nil {
+		fmt.Printf("Failed to query user: %v", err)
+	}
+
+	defer rows.Close()
+
+	var user User
+	for rows.Next() {
+		err := rows.Scan(&user.Username, &user.Password)
+		if err != nil {
+			fmt.Printf("Failed to scan user: %v", err)
+		}
+	}
+
+	return user
 }
