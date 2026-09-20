@@ -1,0 +1,24 @@
+.control-bar {
+    width: max-content;
+    height: 100%;
+}
+
+.control-bar .bar-title {
+    display: none;
+}
+
+.control-bar .bar-description {
+    display: none;
+}
+
+.control-bar button span {
+    display: none;
+}
+
+.page {
+    margin-left: 70px;
+}
+
+.page .page-iframe {
+    width: calc(100vw - 70px);
+}
